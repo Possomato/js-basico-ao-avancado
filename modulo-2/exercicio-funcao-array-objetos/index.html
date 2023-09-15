@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex28</title>
+</head>
+<body>
+  <form action="">
+    <div>
+      <label for="nome">nome:</label>
+      <input type="text" name="nome" id="nome">
+    </div>
+    <br>
+    <div>
+      <label for="sobrenome">sobrenome:</label>
+      <input type="text" name="sobrenome" id="sobrenome">
+    </div>
+    <br>
+    <div>
+      <label for="peso">peso:</label>
+      <input type="text" name="peso" id="peso">
+    </div>
+    <br>
+    <div>
+      <label for="altura">altura:</label>
+      <input type="text" name="altura" id="altura">
+    </div>
+    <br>
+    <button type="submit" id="botao">enviar</button>
+  </form>
+  <p class="resultado"></p>
+  <script>
+    const botao = document.querySelector('#botao')
+    const resultado = document.querySelector('.resultado')
+
+    const pessoas = []
+
+
+    botao.addEventListener('click', (event) => {
+      event.preventDefault()
+
+      const nome = document.querySelector('#nome').value
+      const sobrenome = document.querySelector('#sobrenome').value
+      const peso = document.querySelector('#peso').value
+      const altura = document.querySelector('#altura').value
+
+      const pessoa = {
+        nome,
+        sobrenome,
+        peso,
+        altura
+      }
+
+      pessoas.push(pessoa)
+
+      resultado.innerHTML += `<p>${nome} ${sobrenome} ${peso} ${altura}</p>`
+      console.log(pessoas)
+    })
+
+
+  </script>
+</body>
+</html>
