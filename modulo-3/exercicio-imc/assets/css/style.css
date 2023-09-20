@@ -15,7 +15,7 @@ body {
   background: var(--primary-color);
   font-family: 'Open sans', sans-serif;
   font-size: 1.3em;
-  line-height: 1.5em;
+  line-height: 1em;
 }
 
 .container {
@@ -55,4 +55,18 @@ form button {
 
 form button:hover {
   background: var(--primary-color-darker);
+}
+
+#tabela{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100%;
+}
+
+#resultado{
+  background-color: rgb(47, 255, 158);
+  font-size: 1.5rem;
+  padding: 10px;
 }
