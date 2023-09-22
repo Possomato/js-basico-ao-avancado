@@ -15,7 +15,7 @@ var resultado = (x < 10) && (y > 5);
 
 console.log(resultado); // Isso imprimirá "true" porque ambas as expressões são verdadeiras.
 
-
+// aula 05 - mod 3
 /*
 ||
   retorna o valor verdadeiro
