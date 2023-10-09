@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const comer = {
+      comer(){
+        console.log(`${this.nome} está comendo`)
+      },
+    }
+
+    const treinar = {
+      treinar(){
+        console.log(`${this.nome} está treinando`)
+      }, 
+    }
+
+    const pessoaPrototype = { ...comer, ...treinar}
+
+    function criaPessoa(nome, sobrenome){
+      return Object.create(pessoaPrototype, {
+        nome: {value: nome},
+        sobrenome: {value: sobrenome},
+      })
+    }
+
+    const pessoa1 = criaPessoa('gabriel', 'possomato')
+    const pessoa2 = criaPessoa('rute', 'possomato')
+  </script>
+</body>
+</html>
